@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'credit_form'): ?>
-  <section class="credit-form py-5  p-lg-5">
+  <section class="credit-form py-5  p-lg-5" <?= idTag(get_sub_field('credit_form_anchor')); ?>>
     <div class="container">
       <div class="row d-flex flex-column flex-lg-row">
         <div class="col-12 col-lg-3 p-5 rounded-2" style="background: url(<?php esc_url(the_sub_field('credit_form_left_col_img')); ?>), <?php echo get_theme_mod('primary') ?>;

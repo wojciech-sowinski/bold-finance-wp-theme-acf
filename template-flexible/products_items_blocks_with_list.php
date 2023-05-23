@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'products_items_blocks_with_list'): ?>
-    <section>
+    <section <?= idTag(get_sub_field('products_items_blocks_with_list_anchor')) ?>>
         <div class="container">
             <div class="row">
                 <?php $produktyproducts_items_blocks_with_list_products = get_sub_field('products_items_blocks_with_list_products'); ?>

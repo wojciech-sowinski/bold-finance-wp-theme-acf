@@ -8,8 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'products_items_blocks_with_list_img'): ?>
-    <section>
-
+    <section <?= idTag(get_sub_field('products_items_blocks_with_list_img_anchor')); ?>>
         <div class="container ">
             <div class="row p-5 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
                 <div class="col-12 col-md-6">

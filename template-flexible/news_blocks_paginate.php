@@ -11,7 +11,7 @@
 
 <?php if (get_row_layout() == 'news_blocks_paginate'): ?>
 
-    <section class="news-blocks py-5">
+    <section class="news-blocks py-5" <?= idTag(get_sub_field('news_blocks_paginate_title_anchor')); ?>
         <div class="container">
             <div class="row">
                 <h2 class="fw-semibold">

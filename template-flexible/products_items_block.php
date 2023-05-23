@@ -27,7 +27,7 @@ if (get_row_layout() == 'products_items_block'): ?>
     endif
 
     ?>
-    <section class="products-carousel <?php echo $sectionBgThemeClass; ?>">
+    <section class="products-carousel <?php echo $sectionBgThemeClass; ?>" <?= idTag(get_sub_field('products_items_block_anchor')); ?>>
         <div class="container py-5">
             <div class="row py-2">
                 <h2 class='fw-semibold <?php echo $sectionTextThemeClass; ?>'>
@@ -81,8 +81,6 @@ if (get_row_layout() == 'products_items_block'): ?>
     </div>
 </section>
 <script>
-
-    
     document.addEventListener('DOMContentLoaded', () => {
         splideId = '#' + <?php echo $splideIdJson; ?>;
         const partnerCarousel = new Splide(splideId, {

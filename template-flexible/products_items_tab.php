@@ -11,7 +11,7 @@
     <?php
     $tabsRandomId = generateId();
     ?>
-    <section class="py-5">
+    <section class="py-5" <?= idTag(get_sub_field('products_items_tabs_anchor')); ?>>
         <div class="container ">
             <div class="row">
                 <h2 class="fw-semibold">
