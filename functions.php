@@ -588,14 +588,17 @@ function generate_theme_option_css()
 	?>
 		<style>
 
-
+:root {
+  --bf_primary: <?php echo $primary ?> !important;
+  --bf_secondary: <?php echo $secondary ?> !important;
+  --bf_primary_hover: <?php echo $primary_hover ?> !important;
+  --bf_black: <?php echo $black ?> !important;
+  --bf_white: <?php echo $white ?> !important;
+}
 
 .border-primary{
 	border-color: <?php echo $primary ?> !important;
 }
-
-
-
 
 .control {
     font-family: arial;
@@ -660,7 +663,6 @@ function generate_theme_option_css()
 .control-checkbox input:disabled ~ .control_indicator:after {
     border-color: #7b7b7b;
 }
-
 
 input[type=range] {
   margin: 8px 0;
@@ -730,7 +732,6 @@ input[type=range]::-ms-thumb {
   border-radius: 20px;
   cursor: pointer;
   margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
 }
 input[type=range]:focus::-ms-fill-lower {
   background: #e4e4e4;
@@ -738,17 +739,11 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #e4e4e4;
 }
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
 @supports (-ms-ime-align:auto) {
-  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
   input[type=range] {
     margin: 0;
-    /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
 }
-
-
 
 			.dot{
 				background-color:<?php echo $primary ?>	!important;
@@ -916,10 +911,6 @@ how to remove the virtical space around the range input in IE*/
 				border-bottom: 2px solid transparent;
 				color: <?php echo $black ?> !important;
 			}
-			/* header .nav-link:hover{
-				color: <?php echo $black ?> !important;
-				border-bottom: 2px solid <?php echo $primary ?>;
-			} */
 			
 			.icon-button{
 				width: 36px !important;
@@ -956,7 +947,6 @@ how to remove the virtical space around the range input in IE*/
 			footer a:hover{
 				color:<?php echo $black ?> !important;
 			}
-
 
 			.pagination .current{
 				background-color: <?php echo $primary ?> !important;
@@ -1001,8 +991,6 @@ how to remove the virtical space around the range input in IE*/
 
 add_action('wp_head', 'generate_theme_option_css');
 
-
-
 function generateId(){
 	$length = 10;
     $randomBytes = random_bytes($length);
@@ -1011,25 +999,16 @@ function generateId(){
     for ($i = 0; $i < $length; $i++) {
         $randomId .= chr(ord('a') + (ord($randomBytes[$i]) % 26));
     }
-
 	return $randomId;
 };
 
-
 function boldf_add_custom_types( $query ) {
     if( is_tag() && $query->is_main_query() ) {
-
-        // this gets all post types:
         $post_types = get_post_types();
-
-        // alternately, you can add just specific post types using this line instead of the above:
-        // $post_types = array( 'post', 'your_custom_type' );
-
         $query->set( 'post_type', $post_types );
     }
 }
 add_filter( 'pre_get_posts', 'boldf_add_custom_types' );
-
 
 
 function idTag($id = null) {
@@ -1037,8 +1016,5 @@ function idTag($id = null) {
 		echo 'id="'.$id.'"';
 	}
 };
-
-
-//templates 
 
 

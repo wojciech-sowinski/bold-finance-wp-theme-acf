@@ -20,15 +20,52 @@ if (have_posts()):
 	</header>
 	<main>
 		<?php
-			while (have_posts()):
-				the_post();
 
-// var_dump(have_posts(  ));
+		$args = array(
+			'public' => true,
+			'_builtin' => false
+		);
 
-				the_title();
+		$postTypes = get_post_types($args);
 
-			endwhile;
-			?>
+		foreach ($postTypes as $postType) {
+
+			$postFullName = get_post_type_object($postType)->labels->singular_name;
+			$paged = $_GET["tagpage"] ? $_GET["tagpage"] : 1;
+			$postQuery = new WP_Query([
+				'post_type' => $postType,
+				'tag' => single_tag_title('', false),
+				'paged' => $paged,
+				'order' => 'DESC',
+				'post_per_page' => 3
+			]);
+
+			if ($postQuery->have_posts()) { ?>
+				<section class="container news-tag-blocks">
+					<div class="row py-5 fw-semibold">
+						<h2 class="m-0 fw-semibold">
+							<?php echo $postFullName; ?>
+						</h2>
+					</div>
+					<div class="row py-3">
+						<?php
+						while ($postQuery->have_posts()) {
+							$postQuery->the_post(); ?>
+
+
+
+
+
+							<?php
+						}
+						?>
+					</div>
+				</section>
+				<?php
+			}
+		}
+		?>
+		
 	</main>
 	<?php
 	// get_template_part( 'archive', 'loop' );

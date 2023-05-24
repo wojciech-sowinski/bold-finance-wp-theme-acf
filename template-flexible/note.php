@@ -7,7 +7,6 @@
  * @author Wojciech Sowiński <wojciech.sowinski@innhouse.pl>
  */
 ?>
-
 <?php if (get_row_layout() == 'note'): ?>
   <section class="note-section px-2 py-5" <?= idTag(get_sub_field('note_text_anchor')); ?>>
     <div class="container">

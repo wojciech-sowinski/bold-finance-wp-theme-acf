@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'news_blocks'): ?>
-    <section class="news-blocks py-5" <?= idTag(get_field('news_block_excerption_anchor')) ?>>
+    <section class="news-blocks py-3" <?= idTag(get_field('news_block_excerption_anchor')) ?>>
         <div class="container">
             <div class="row">
                 <h2 class="fw-semibold">
@@ -35,20 +35,17 @@
                                     ?>
                                     <li class="splide__slide">
                                         <div class="content shadow h-100">
-                                            <div>
-                                                <?php $news_img = get_field('news_img'); ?>
-                                                <?php $size = 'full'; ?>
-                                                <?php if ($news_img): ?>
-                                                    <?php echo wp_get_attachment_image($news_img, $size, false, array('class' => 'img-cover')); ?>
-                                                <?php endif; ?>
+                                            <div class="card-img-container">
+                                                <?php the_post_thumbnail('medium_large',array( 'class' => 'img-cover' )); ?>
                                             </div>
                                             <div class="p-3 d-flex flex-column justify-content-between news-block-content">
                                                 <div>
                                                     <h3 class="fw-bold py-2">
-                                                        <?php the_field('news_title'); ?>
+                                                        <?php the_title(); ?>
                                                     </h3>
-                                                    <p class="py-2">
-                                                        <?php the_field('news_excerption'); ?>
+                                                    <p class="py-2"><?php 
+                                                    ?>
+                                                        <?php echo wp_trim_words(get_the_excerpt() , 10 , '' ) ?>
                                                     </p>
                                                 </div>
                                                 <div class="py-2">

@@ -11,7 +11,7 @@
 
 <?php if (get_row_layout() == 'news_blocks_paginate'): ?>
 
-    <section class="news-blocks py-5" <?= idTag(get_sub_field('news_blocks_paginate_title_anchor')); ?>
+    <section class="news-blocks py-3" <?= idTag(get_sub_field('news_blocks_paginate_title_anchor')); ?>>
         <div class="container">
             <div class="row">
                 <h2 class="fw-semibold">
@@ -40,21 +40,18 @@
                         ?>
                         <div class="col-12 col-md-4">
                             <div class="content shadow h-100">
-                                <div>
-                                    <?php $news_img = get_field('news_img'); ?>
-                                    <?php $size = 'full'; ?>
-                                    <?php if ($news_img): ?>
-                                        <?php echo wp_get_attachment_image($news_img, $size, false, array('class' => 'img-cover')); ?>
-                                    <?php endif; ?>
+                                <div class="card-img-container">
+                                    <?php the_post_thumbnail('medium_large', array('class' => 'img-cover')); ?>
                                 </div>
                                 <div class="p-3 d-flex flex-column justify-content-between news-paginate-block-content">
                                     <div>
-                                        <h3 class="fw-bold py-2">
-                                            <?php the_field('news_title'); ?>
-                                        </h3>
-                                        <p class="py-2">
-                                            <?php the_field('news_excerption'); ?>
-                                        </p>
+                                    <h3 class="fw-bold py-2">
+                                                        <?php the_title(); ?>
+                                                    </h3>
+                                                    <p class="py-2"><?php 
+                                                    ?>
+                                                        <?php echo wp_trim_words(get_the_excerpt() , 10 , '' ) ?>
+                                                    </p>
                                     </div>
                                     <div class="py-2">
                                         <a class="btn btn-primary btn-sm" title="Read more" href="<?php the_permalink(); ?>">Czytaj
