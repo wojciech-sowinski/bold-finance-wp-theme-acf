@@ -64,7 +64,6 @@
               <div class="col-12 col-lg-3">
                 <label for="client_name" class="form-label d-none d-md-block py-3">Nazwa firmy</label>
               </div>
-
               <div class="col-12 col-lg-9">
                 <input type="text" class="form-control  py-3" id="client_name" placeholder="Nazwa firmy" required>
                 <div class="invalid-feedback">
@@ -113,7 +112,6 @@
     </div>
   </section>
 <?php endif; ?>
-
 <script>
   const formatter = new Intl.NumberFormat('pl-PL', {
     style: 'currency',
@@ -125,8 +123,6 @@
   function getFromRange(val) {
     document.getElementById("creditValue").value = formatter.format(val);
   }
-
-
   (function () {
     'use strict';
     window.addEventListener('load', function () {

@@ -10,7 +10,7 @@
 
 <?php if (get_row_layout() == 'page_header'): ?>
     <section class="container pt-1 pb-4 ">
-        <div class="row p-0 flex-column-reverse flex-lg-row-reverse"
+        <div class="row flex-column-reverse flex-lg-row-reverse"
             style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
             <?php if ( get_sub_field( 'page_header_img' ) ) : ?>
             <div class="col-12 col-lg-6 p-0 bg-img-cover" style="background-image:url(<?php the_sub_field( 'page_header_img' ); ?>); padding:150px 0 !important;">

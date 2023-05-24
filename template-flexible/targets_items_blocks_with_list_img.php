@@ -10,15 +10,13 @@
 <?php if (get_row_layout() == 'targets_items_blocks_with_list_img'): ?>
     <section <?= idTag(get_sub_field('targets_items_blocks_with_list_img_anchor')); ?> class="py-4">
         <div class="container ">
-            <div class="row p-5 shadow"
+            <div class="row p-1 p-md-5 shadow"
                 style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
                 <div class="col-12 col-md-6">
-                   
                     <?php $targets_items_blocks_with_list_img_targets = get_sub_field('targets_items_blocks_with_list_img_target'); ?>
                     <?php if ($targets_items_blocks_with_list_img_targets): ?>
                         <?php $post = $targets_items_blocks_with_list_img_targets; ?>
                         <?php setup_postdata($post);
-
                         ?>
                         <h2 class="fw-semibold">
                             <?php the_title(); ?>
@@ -34,7 +32,6 @@
                                         <?php the_sub_field('target_list_item'); ?>
                                     </li>
                                 <?php endwhile; ?>
-
                             <?php endif; ?>
                         </ul>
                         <div class="py-3">
@@ -42,7 +39,6 @@
                             <?php wp_reset_postdata(); ?>
                         </div>
                     <?php endif; ?>
-
                 </div>
                 <div class="col-12 col-md-6 p-5 d-flex flex-column justify-content-center">
                     <div class="d-flex justify-content-center">

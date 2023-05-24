@@ -9,11 +9,11 @@
 ?>
 <?php if (get_row_layout() == 'tags_cloud'): ?>
   <section class="container py-4">
-    <div class="row px-2 px-md-0 py-2">
+    <div class="row py-2">
       <?php
       if (get_sub_field('tags_cloud_title')) {
         ?>
-        <h2 class="fw-bold px-0">
+        <h2 class="fw-bold">
           <?php the_sub_field('tags_cloud_title'); ?>
         </h2>
         <?php
@@ -21,12 +21,12 @@
       <?php
       if (get_sub_field('tags_cloud_excerpt')) {
         ?>
-        <p class="pb-3 px-0">
+        <p class="pb-3">
           <?php the_sub_field('tags_cloud_excerpt'); ?>
         </p>
       <?php } ?>
     </div>
-    <div class="row d-flex flex-row gap-3 px-2 px-md-0 py-2">
+    <div class="row d-flex flex-row gap-3 px-2 py-2">
       <?php
       $postType = get_sub_field('tags_cloud_type') ? get_sub_field('tags_cloud_type') : 'post';
       $args = array(

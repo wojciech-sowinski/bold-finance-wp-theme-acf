@@ -10,7 +10,7 @@
 <?php if (get_row_layout() == 'products_items_blocks_with_list_img'): ?>
     <section <?= idTag(get_sub_field('products_items_blocks_with_list_img_anchor')); ?> class="py-4">
         <div class="container ">
-            <div class="row p-5 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
+            <div class="row p-1 p-md-5 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
                 <div class="col-12 col-md-6">
                     <?php $products_items_blocks_with_list_img_products = get_sub_field('products_items_blocks_with_list_img_products'); ?>
                     <?php if ($products_items_blocks_with_list_img_products): ?>

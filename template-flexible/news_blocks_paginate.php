@@ -31,7 +31,6 @@
                     'order' => 'DESC',
                     'paged' => $paged
                 );
-
                 $query = new WP_Query($args);
                 $posts = $query->get_posts();
                 if ($posts): ?>

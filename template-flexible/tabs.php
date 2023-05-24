@@ -7,13 +7,10 @@
  * @author Wojciech Sowiński <wojciech.sowinski@innhouse.pl>
  */
 ?>
-
 <?php if (get_row_layout() == 'tabs'): ?>
     <?php if (have_rows('tabs_tab')): ?>
         <?php
-
         $tabsRandomId = generateId();
-
         ?>
         <section <?= idTag(get_sub_field('tabs_anchor')); ?> class="py-4">
             <div class="container">

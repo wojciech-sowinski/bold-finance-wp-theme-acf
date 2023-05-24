@@ -7,7 +7,6 @@
  * @author Wojciech Sowiński <wojciech.sowinski@innhouse.pl>
  */
 ?>
-
 <?php if (get_row_layout() == 'anchor_nav'): ?>
     <section class="pt-4">
         <div class="container">

@@ -10,7 +10,7 @@
 <?php if (get_row_layout() == 'note'): ?>
   <section class="note-section px-2 py-4" <?= idTag(get_sub_field('note_text_anchor')); ?>>
     <div class="container">
-      <div class="row ">
+      <div class="row">
         <div class="col-12 col-lg-3 bg-primary text-light p-5 rounded-4">
           <p class="fw-semibold fs-5">
           <?php the_sub_field('note_title'); ?>

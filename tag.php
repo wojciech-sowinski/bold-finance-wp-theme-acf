@@ -31,6 +31,7 @@ if (have_posts()):
 		foreach ($postTypes as $postType) {
 
 			$postFullName = get_post_type_object($postType)->labels->singular_name;
+
 			$paged = $_GET["tagpage"] ? $_GET["tagpage"] : 1;
 			$postQuery = new WP_Query([
 				'post_type' => $postType,
@@ -41,8 +42,8 @@ if (have_posts()):
 			]);
 
 			if ($postQuery->have_posts()) { ?>
-				<section class="container news-tag-blocks">
-					<div class="row py-5 fw-semibold">
+				<section class="container py-4 news-tag-blocks">
+					<div class="row py-3 fw-semibold">
 						<h2 class="m-0 fw-semibold">
 							<?php echo $postFullName; ?>
 						</h2>
@@ -51,11 +52,29 @@ if (have_posts()):
 						<?php
 						while ($postQuery->have_posts()) {
 							$postQuery->the_post(); ?>
-
-
-
-
-
+							<div class="col-12 col-md-4">
+								<div class="content shadow h-100">
+									<div class="card-img-container">
+										<?php the_post_thumbnail('medium_large', array('class' => 'img-cover')); ?>
+									</div>
+									<div class="p-3 d-flex flex-column justify-content-between news-paginate-block-content">
+										<div>
+											<h3 class="fw-bold py-2">
+												<?php the_title(); ?>
+											</h3>
+											<p class="py-2">
+												<?php
+												?>
+												<?php echo wp_trim_words(get_the_excerpt(), 10, '') ?>
+											</p>
+										</div>
+										<div class="py-2">
+											<a class="btn btn-primary btn-sm" title="Read more" href="<?php the_permalink(); ?>">Czytaj
+												dalej</a>
+										</div>
+									</div>
+								</div>
+							</div>
 							<?php
 						}
 						?>
@@ -65,7 +84,7 @@ if (have_posts()):
 			}
 		}
 		?>
-		
+
 	</main>
 	<?php
 	// get_template_part( 'archive', 'loop' );
