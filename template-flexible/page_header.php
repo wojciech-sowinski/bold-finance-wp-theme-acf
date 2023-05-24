@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_row_layout() == 'page_header'): ?>
-    <section class="container pt-1 pb-5 ">
+    <section class="container pt-1 pb-4 ">
         <div class="row p-0 flex-column-reverse flex-lg-row-reverse"
             style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
             <?php if ( get_sub_field( 'page_header_img' ) ) : ?>
@@ -18,7 +18,7 @@
             </div>
             <div
                 class="col-12 col-lg-6 bg-primary text-light d-flex flex-column justify-content-start align-items-start">
-                <div class="col-12 px-5 py-4 ">
+                <div class="col-12 px-5 py-5 ">
                     <div>
                         <?php if (get_sub_field('page_header_breadcrumbs_bool') == 1): ?>
                             <?php

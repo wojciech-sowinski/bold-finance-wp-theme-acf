@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_row_layout() == 'last_news_asymetric'): ?>
-    <section class="container px-1 px-md-0 py-3 ">
+    <section class="container px-1 px-md-0 py-4 ">
         <div class="row">
             <h2 class="fw-semibold">
                 <?php the_sub_field('last_news_asymetric_title'); ?>

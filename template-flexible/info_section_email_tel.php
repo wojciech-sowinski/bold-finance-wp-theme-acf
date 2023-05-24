@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'info_section_email_tel'): ?>
-    <section <?= idTag(get_sub_field('info_section_email_tel_anchor')); ?> class="py-3">
+    <section <?= idTag(get_sub_field('info_section_email_tel_anchor')); ?> class="py-4">
         <div class="container border border-primary border-4 border-top-0 border-bottom-0 border-end-0 px-3 my-5 shadow">
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-12 col-lg-12 col-xl-3 d-flex justify-content-center justify-content-xl-end">

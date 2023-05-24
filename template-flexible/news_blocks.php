@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'news_blocks'): ?>
-    <section class="news-blocks py-3" <?= idTag(get_field('news_block_excerption_anchor')) ?>>
+    <section class="news-blocks py-4" <?= idTag(get_field('news_block_excerption_anchor')) ?>>
         <div class="container">
             <div class="row">
                 <h2 class="fw-semibold">

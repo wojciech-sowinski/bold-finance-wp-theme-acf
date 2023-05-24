@@ -15,7 +15,7 @@
         $tabsRandomId = generateId();
 
         ?>
-        <section <?= idTag(get_sub_field('tabs_anchor')); ?> class="py-3">
+        <section <?= idTag(get_sub_field('tabs_anchor')); ?> class="py-4">
             <div class="container">
                 <div class="row">
                     <ul class="nav nav-tabs d-flex justify-content-center  mt-3 mb-5" id="nav-tabs-dot" role="tablist">

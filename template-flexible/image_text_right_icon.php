@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'image_text_right_icon'): ?>
-    <section class="container   py-3 ">
+    <section class="container py-4 ">
         <div class="row p-0 flex-column-reverse flex-lg-row-reverse"
             style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
             <div class="col-12 col-lg-6 p-0 ">

@@ -32,7 +32,7 @@
         $imgPositionClass = '-reverse';
     }?>
 
-    <section class="container py-3" <?= idTag(get_sub_field( 'image_text_anchor' )) ?> >
+    <section class="container py-4" <?= idTag(get_sub_field( 'image_text_anchor' )) ?> >
         <div class="row p-0 flex-column-reverse flex-lg-row<?php echo $imgPositionClass ?>"
             style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
             <div class="col-12 col-lg-6 p-0 ">

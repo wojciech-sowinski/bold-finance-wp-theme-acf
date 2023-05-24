@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'products_items_blocks_with_list_bg_img'): ?>
-    <section class="p-3" <?= idTag(get_sub_field('products_items_blocks_with_list_bg_img_anchor')); ?>>
+    <section class="p-4" <?= idTag(get_sub_field('products_items_blocks_with_list_bg_img_anchor')); ?>>
         <div class="container " style= "">
             <div class="row p-4 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 ); background-image:url(<?php the_sub_field( 'products_items_blocks_with_list_bg_img_products_img' ); ?>); background-size:contain; background-position:right; background-repeat:no-repeat;">
                 <div class="col-12 col-md-6">

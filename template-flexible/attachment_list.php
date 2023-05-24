@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'attachment_list'): ?>
-    <section class="attachments-list px-1 py-3 " <?= tagId(get_sub_field('attachment_list_anchor')); ?>>
+    <section class="attachments-list px-1 py-4 " <?= tagId(get_sub_field('attachment_list_anchor')); ?>>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-9 col-lg-6 m-auto border border-primary border-4 border-top-0 border-bottom-0 border-end-0 shadow p-1 p-md-3">

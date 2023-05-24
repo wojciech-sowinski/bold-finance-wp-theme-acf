@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'tags_cloud'): ?>
-  <section class="container py-3">
+  <section class="container py-4">
     <div class="row px-2 px-md-0 py-2">
       <?php
       if (get_sub_field('tags_cloud_title')) {

@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_row_layout() == 'anchor_nav'): ?>
-    <section class="py-3">
+    <section class="pt-4">
         <div class="container">
             <div class="row">
                 <ul class="nav nav-tabs d-flex justify-content-center  mt-3 mb-5" id="nav-tabs-dot" role="tablist">
