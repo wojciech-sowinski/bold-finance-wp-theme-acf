@@ -7,12 +7,9 @@ get_header();
 <section class="container pt-2 pb-2 ">
   <div class="row p-0 flex-column-reverse flex-lg-row-reverse"
     style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
-    <?php $product_header_img = get_field('product_header_img'); ?>
-    <?php if ($product_header_img): ?>
       <div class="col-12 col-lg-6 p-0 bg-img-cover"
-        style="background-image:url(<?php echo esc_url($product_header_img['url']); ?>); padding:150px 0 !important;">
+        style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>); padding:150px 0 !important;">
       </div>
-    <?php endif; ?>
     <div class="col-12 col-lg-6 bg-primary text-light d-flex flex-column justify-content-start align-items-start">
       <div class="col-12 p-1 px-md-5 py-md-4 ">
         <div>
@@ -57,7 +54,6 @@ get_header();
     </div>
   </div>
 </section>
-
 <?php if (have_rows('product_tab')): ?>
   <section class="container pt-2 pb-2 ">
     <div class="container">

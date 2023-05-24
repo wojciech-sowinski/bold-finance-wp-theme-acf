@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_row_layout() == 'adress_blocks'): ?>
-  <section class="py-5">
+  <section class="py-3">
     <div class="container">
       <div class="row d-flex align-items-stretch justify-content-center">
         <?php

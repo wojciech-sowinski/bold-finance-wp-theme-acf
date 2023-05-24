@@ -10,7 +10,7 @@
 <?php if (get_row_layout() == 'text_list_img'):
     $listStyle = get_sub_field('text_list_style');
     ?>
-    <section class="py-5" <?= idTag(get_sub_field('text_list_img_anchor')); ?>>
+    <section class="py-3" <?= idTag(get_sub_field('text_list_img_anchor')); ?>>
         <div class="container">
             <div class="row">
                 <div class="col-12 py-3 col-lg-6">

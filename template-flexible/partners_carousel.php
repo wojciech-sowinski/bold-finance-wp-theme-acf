@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'partners_carousel'): ?>
-    <section class="partners-carousel">
+    <section class="partners-carousel py-3" >
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3 col-xl-2 d-flex flex-column justify-content-center px-3">

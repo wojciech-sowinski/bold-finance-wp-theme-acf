@@ -8,19 +8,19 @@
  */
 ?>
 <?php if (get_row_layout() == 'products_items_blocks_with_list_bg_img'): ?>
-    <section class="p-5" <?= idTag(get_sub_field('products_items_blocks_with_list_bg_img_anchor')); ?>>
+    <section class="p-3" <?= idTag(get_sub_field('products_items_blocks_with_list_bg_img_anchor')); ?>>
         <div class="container " style= "">
-            <div class="row p-5 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 ); background-image:url(<?php the_sub_field( 'products_items_blocks_with_list_bg_img_products_img' ); ?>); background-size:contain; background-position:right; background-repeat:no-repeat;">
+            <div class="row p-4 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 ); background-image:url(<?php the_sub_field( 'products_items_blocks_with_list_bg_img_products_img' ); ?>); background-size:contain; background-position:right; background-repeat:no-repeat;">
                 <div class="col-12 col-md-6">
                     <?php $products_items_blocks_with_list_bg_img_products = get_sub_field('products_items_blocks_with_list_bg_img_products'); ?>
                     <?php if ($products_items_blocks_with_list_bg_img_products): ?>
                         <?php $post = $products_items_blocks_with_list_bg_img_products; ?>
                         <?php setup_postdata($post); ?>
                         <h2 class="fw-semibold">
-                            <?php the_field('product_name'); ?>
+                            <?php the_title(); ?>
                         </h2>
                         <p>
-                            <?php the_field('product_excerpt'); ?>
+                            <?php echo wp_trim_words( get_the_excerpt(), 20, '' ); ?>
                         </p>
                         <ul class="list-unstyled">
                             <?php if (have_rows('product_list_items')): ?>

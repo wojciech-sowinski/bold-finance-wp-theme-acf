@@ -1,4 +1,4 @@
-<section class="newsletter-section bg-primary text-light p-5" <?= idTag(get_sub_field('newsletter_anchor')) ?>>
+<section class="newsletter-section bg-primary text-light p-3" <?= idTag(get_sub_field('newsletter_anchor')) ?>>
     <div class="container px-md-5">
         <div class="row px-md-5">
             <div>

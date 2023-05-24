@@ -14,7 +14,6 @@ if (get_row_layout() == 'products_items_block'): ?>
     $splideId = generateId();
     $splideIdJson = json_encode($splideId);
 
-
     $sectionThemeClass = '';
     $products_items_block_theme = get_sub_field('products_items_block_theme');
 
@@ -25,10 +24,10 @@ if (get_row_layout() == 'products_items_block'): ?>
         $sectionBgThemeClass = 'bg-primary';
         $sectionTextThemeClass = 'text-light';
     endif
-
     ?>
-    <section class="products-carousel <?php echo $sectionBgThemeClass; ?>" <?= idTag(get_sub_field('products_items_block_anchor')); ?>>
-        <div class="container py-5">
+    <section class="products-carousel py-3 <?php echo $sectionBgThemeClass; ?>"
+        <?= idTag(get_sub_field('products_items_block_anchor')); ?>>
+        <div class="container ">
             <div class="row py-2">
                 <h2 class='fw-semibold <?php echo $sectionTextThemeClass; ?>'>
                     <?php the_sub_field('products_title'); ?>
@@ -40,7 +39,7 @@ if (get_row_layout() == 'products_items_block'): ?>
             <div id="<?php echo $splideId; ?>" class="row splide">
                 <?php $colClass = (count(get_row('products')) == 2) ? 6 : 3; ?>
                 <?php if (have_rows('products')): ?>
-                    <div class="splide__track py-5">
+                    <div class="splide__track py-4">
                         <ul class="splide__list">
                             <?php while (have_rows('products')):
                                 the_row(); ?>
@@ -48,21 +47,26 @@ if (get_row_layout() == 'products_items_block'): ?>
                                 <?php if ($product): ?>
                                     <?php foreach ($product as $post): ?>
                                         <?php setup_postdata($post); ?>
-                                        <li class="bg-white splide__slide col-12 col-lg-6 col-xl-<?php echo $colClass ?> py-4 shadow">
+                                        <li class="bg-white splide__slide col-12 col-lg-6 col-xl-<?php echo $colClass ?> shadow">
                                             <div class="product-card-content h-100 ">
-                                                <div class="p-4">
-                                                    <?php $product_icon = get_field('product_icon'); ?>
-                                                    <?php $size = 'full'; ?>
-                                                    <?php if ($product_icon): ?>
-                                                        <?php echo wp_get_attachment_image($product_icon, $size); ?>
-                                                    <?php endif; ?>
+                                                <div class="product-card-autoheight">
+                                                    <div class="p-4 ">
+                                                        <?php $product_icon_img = get_field('product_icon_img'); ?>
+                                                        <?php $size = 'full';
+                                                        if ($product_icon_img) {
+                                                            echo wp_get_attachment_image($product_icon_img, $size, false, ['class' => 'img-contain']);
+                                                        } else {
+                                                            the_post_thumbnail('medium_large', array('class' => 'img-cover'));
+                                                        }
+                                                        ?>
+                                                    </div>
+                                                    <h3 class="px-4 pb-4 fw-semibold">
+                                                        <?php the_title(); ?>
+                                                    </h3>
+                                                    <p class="px-4 pb-4">
+                                                        <?php echo wp_trim_words(get_the_excerpt(), 20, '') ?>
+                                                    </p>
                                                 </div>
-                                                <h3 class="px-4 pb-4 fw-semibold">
-                                                    <?php the_field('product_name'); ?>
-                                                </h3>
-                                                <p class="px-4 pb-4">
-                                                    <?php the_field('product_excerpt'); ?>
-                                                </p>
                                                 <div class="px-4 pb-4">
                                                     <a class="btn btn-primary btn-sm" title="check offer"
                                                         href="<?php the_permalink(); ?>">Sprawdź</a>
