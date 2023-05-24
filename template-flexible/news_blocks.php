@@ -27,7 +27,7 @@
                     )
                 );
                 if ($posts): ?>
-                    <section class="splide py-0">
+                    <section class="splide faded-carousel py-0">
                         <div class="splide__track">
                             <ul class="splide__list py-4">
                                 <?php foreach ($posts as $post):

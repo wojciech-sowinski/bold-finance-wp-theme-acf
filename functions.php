@@ -1018,3 +1018,15 @@ function idTag($id = null) {
 };
 
 
+function read_time_counter() {
+    $content = get_the_content();
+    $content = strip_tags($content); // Usuń znaczniki HTML
+
+    $read_speed = 100; // words/minute
+    $word_count = str_word_count($content); // Oblicz liczbę słów w treści
+
+    $read_time = ceil($word_count / $read_speed); // Oblicz czas czytania w minutach
+
+    return $read_time;
+}
+

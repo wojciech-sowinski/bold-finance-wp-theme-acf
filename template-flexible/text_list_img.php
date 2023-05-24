@@ -17,7 +17,7 @@
                     <h3 class="fw-bold py-3">
                         <?php the_sub_field('text_list_img_title'); ?>
                     </h3>
-                    <p class=" py-3">
+                    <p class=" py-3 ">
                         <?php the_sub_field('text_list_img_text'); ?>
                     </p>
                     <ul class="list-group list-unstyled">
@@ -80,7 +80,7 @@
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
-                    <div class="p-5">
+                    <div class="pt-5 ps-5 h-100">
                         <?php $text_list_img_img = get_sub_field('text_list_img_img'); ?>
                         <?php $size = 'full'; ?>
                         <?php if ($text_list_img_img): ?>
