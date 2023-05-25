@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_row_layout() == 'adress_blocks'): ?>
-  <section class="py-4">
+  <section class="py-4 adress_blocks" <?php echo idTag(get_sub_field('adress_blocks_anchor')); ?>>
     <div class="container">
       <div class="row d-flex align-items-stretch justify-content-center">
         <?php

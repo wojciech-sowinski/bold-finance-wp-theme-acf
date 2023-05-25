@@ -28,10 +28,10 @@ $slider_version = get_sub_field('slider_version');
                         <?php if (have_rows('slide')): ?>
                             <?php while (have_rows('slide')):
                                 the_row(); ?>
-                                <li class="splide__slide py-5">
+                                <li class="splide__slide py-2 py-md-5">
                                     <div class="container py-5 h-100 d-flex flex-column justify-content-center">
                                         <div class="row">
-                                            <div class="col-12 col-lg-6 py-5">
+                                            <div class="col-12 col-lg-6 py-2 py-md-5">
                                                 <h1 class="slide-title text-center text-lg-start py-3"
                                                     style="color:<?php the_sub_field('text_color'); ?>">
                                                     <?php the_sub_field('title');

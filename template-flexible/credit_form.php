@@ -49,14 +49,27 @@
               </div>
               <div class="col-12 col-lg-9">
                 <select id="product_input" class="form-control form-select  py-3 fw-semibold">
-                  <?php $product_list = get_sub_field('product_list'); ?>
-                  <?php if ($product_list): ?>
-                    <?php foreach ($product_list as $post): ?>
-                      <?php setup_postdata($post); ?>
-                      <option><?php the_title(); ?></option>
-                    <?php endforeach; ?>
-                    <?php wp_reset_postdata(); ?>
-                  <?php endif; ?>
+                  <?php
+                  $query = new WP_Query(
+                    array(
+                      'post_type' => 'product',
+                      'orderby ' => 'name',
+                      'order' => 'ASC'
+                    )
+                  );
+                  $posts = $query->get_posts();
+                  if ($posts) {
+                    foreach ($posts as $post) {
+                      setup_postdata($post);
+                      the_title(); ?>
+                      <option>
+                        <?php the_title(); ?>
+                      </option>
+                      <?php
+                      wp_reset_postdata();
+                    };
+                  };
+                  ?>
                 </select>
               </div>
             </div>

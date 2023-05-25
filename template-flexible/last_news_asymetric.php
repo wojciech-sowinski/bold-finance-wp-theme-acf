@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_row_layout() == 'last_news_asymetric'): ?>
-    <section class="container py-4 ">
+    <section class="container py-4 last_news_asymetric">
         <div class="row">
             <h2 class="fw-semibold">
                 <?php the_sub_field('last_news_asymetric_title'); ?>
@@ -62,14 +62,14 @@
                                 </div>
                                 <div class="d-flex flex-column justify-content-between">
                                     <div>
-                                        <h3 class="px-3 fw-semibold">
+                                        <h3 class="px-0 px-md-3 fw-semibold">
                                             <?php the_title(); ?>
                                         </h3>
-                                        <p class="py-3 px-3">
+                                        <p class="py-3 px-0 px-md-3">
                                             <?php echo wp_trim_words(get_the_excerpt(), 10, '') ?>
                                         </p>
                                     </div>
-                                    <div class="pt-3 px-3">
+                                    <div class="pt-3 px-0 px-md-3">
                                         <a href="<?= get_permalink() ?>" class="btn btn-primary">Czytaj dalej</a>
                                     </div>
                                 </div>

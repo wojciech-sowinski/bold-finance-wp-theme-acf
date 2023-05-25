@@ -7,7 +7,6 @@
  * @author Wojciech Sowiński <wojciech.sowinski@innhouse.pl>
  */
 ?>
-
 <?php if (get_row_layout() == 'page_header'): ?>
     <section class="container pt-1 pb-4 ">
         <div class="row flex-column-reverse flex-lg-row-reverse"
@@ -18,7 +17,7 @@
             </div>
             <div
                 class="col-12 col-lg-6 bg-primary text-light d-flex flex-column justify-content-start align-items-start">
-                <div class="col-12 px-5 py-5 ">
+                <div class="col-12 px-1 pb-4 pt-4 px-md-5 pb-md-5  pt-md-5">
                     <div>
                         <?php if (get_sub_field('page_header_breadcrumbs_bool') == 1): ?>
                             <?php
@@ -69,6 +68,5 @@
                 </div>
             </div>
         </div>
-
     </section>
 <?php endif; ?>

@@ -10,7 +10,7 @@
 <?php if (get_row_layout() == 'text_list_img'):
     $listStyle = get_sub_field('text_list_style');
     ?>
-    <section class="py-4" <?= idTag(get_sub_field('text_list_img_anchor')); ?>>
+    <section class="py-4 text_list_img" <?= idTag(get_sub_field('text_list_img_anchor')); ?>>
         <div class="container">
             <div class="row">
                 <div class="col-12 py-3 col-lg-6">
@@ -52,7 +52,7 @@
                                         ; ?>"><?php echo get_row_index() ?></span>
                                         <?php the_sub_field('text_list_img_list_item_name');
                                     } elseif ($listStyle == 1) { ?>
-                                        <i class="icon-checked text-primary fs-2 py-1 px-5"></i>
+                                        <i class="icon-checked text-primary fs-2 px-3 py-1 py-md-3 px-md-5"></i>
                                         <?php the_sub_field('text_list_img_list_item_name');
                                     }
                                     ?>

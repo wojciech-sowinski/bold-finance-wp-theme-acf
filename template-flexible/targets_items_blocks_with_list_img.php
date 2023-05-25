@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'targets_items_blocks_with_list_img'): ?>
-    <section <?= idTag(get_sub_field('targets_items_blocks_with_list_img_anchor')); ?> class="py-4">
+    <section <?= idTag(get_sub_field('targets_items_blocks_with_list_img_anchor')); ?> class="py-4 targets_items_blocks_with_list_img">
         <div class="container ">
             <div class="row p-1 p-md-5 shadow"
                 style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">

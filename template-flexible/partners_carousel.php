@@ -57,6 +57,9 @@
                     1000: {
                         perPage: 3,
                     },
+                    576: {
+                        perPage: 1,
+                    },
                 }
             });
             partnerCarousel.mount(window.splide.Extensions);

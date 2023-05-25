@@ -11,7 +11,7 @@
   <?php
   $accordionId = generateId();
   ?>
-  <section class="py-4" <?= idTag(get_sub_field('q_a_acordion_anchor')); ?>>
+  <section class="py-4 q_a_acordion" <?= idTag(get_sub_field('q_a_acordion_anchor')); ?>>
     <div class="container">
       <div class="row pb-3">
         <h2 class="fw-semibold">

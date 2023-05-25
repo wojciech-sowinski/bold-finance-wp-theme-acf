@@ -8,9 +8,9 @@
  */
 ?>
 <?php if (get_row_layout() == 'products_items_blocks_with_list_img'): ?>
-    <section <?= idTag(get_sub_field('products_items_blocks_with_list_img_anchor')); ?> class="py-4">
+    <section <?= idTag(get_sub_field('products_items_blocks_with_list_img_anchor')); ?> class="py-4 products_items_blocks_with_list_img">
         <div class="container ">
-            <div class="row p-1 p-md-5 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
+            <div class="row  px-3 py-4 px-md-5 py-md-5 shadow" style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
                 <div class="col-12 col-md-6">
                     <?php $products_items_blocks_with_list_img_products = get_sub_field('products_items_blocks_with_list_img_products'); ?>
                     <?php if ($products_items_blocks_with_list_img_products): ?>
@@ -26,7 +26,7 @@
                             <?php if (have_rows('product_list_items')): ?>
                                 <?php while (have_rows('product_list_items')):
                                     the_row(); ?>
-                                    <li class=" p-2 d-flex align-items-center"><i class="icon-checked text-primary fs-2 py-2 px-3"></i>
+                                    <li class=" p-2 d-flex align-items-center"><i class="icon-checked text-primary fs-2 px-3 py-1 py-md-3 px-md-5"></i>
                                         <?php the_sub_field('product_list_item'); ?>
                                     </li>
                                 <?php endwhile; ?>

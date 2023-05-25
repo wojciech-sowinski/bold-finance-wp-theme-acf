@@ -8,7 +8,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'image_text_right_icon'): ?>
-    <section class="container py-4 ">
+    <section class="container py-4 image_text_right_icon">
         <div class="row  flex-column-reverse flex-lg-row-reverse"
             style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
             <div class="col-12 col-lg-6 p-0 ">
@@ -29,7 +29,7 @@
             </div>
             <div
                 class="col-12 col-lg-6 bg-primary text-light d-flex flex-column justify-content-center p-1 p-md-5 align-items-start">
-                <div class="col-12 px-5">
+                <div class="col-12 py-3 px-2 px-md-5">
                     <h2 class="py-2 text-center text-lg-start ">
                         <?php the_sub_field('title'); ?>
                     </h2>

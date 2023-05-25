@@ -8,12 +8,11 @@
  */
 ?>
 
-
 <?php if (get_row_layout() == 'news_blocks_paginate'): ?>
 
-    <section class="news-blocks py-4" <?= idTag(get_sub_field('news_blocks_paginate_title_anchor')); ?>>
+    <section class="news-blocks py-4 news_blocks_paginate" <?= idTag(get_sub_field('news_blocks_paginate_title_anchor')); ?>>
         <div class="container">
-            <div class="row">
+            <div class="row py-3">
                 <h2 class="fw-semibold">
                     <?php the_sub_field('news_blocks_paginate_title'); ?>
                 </h2>

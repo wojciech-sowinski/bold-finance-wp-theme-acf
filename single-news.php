@@ -9,8 +9,8 @@
 ?>
 <?php
 get_header();
-
 ?>
+
 <section class="container pt-2 pb-2 ">
     <div class="row p-0 flex-column-reverse flex-lg-row-reverse"
         style=" margin-left: calc((100% - 100vw)/5 ); margin-right: calc((100% - 100vw)/5 );">
@@ -44,22 +44,37 @@ get_header();
         </div>
     </div>
 </section>
-<section>
+
+<section class="py-4">
     <div class="container post-content" id="more">
         <?php
         the_content();
         ?>
+        <?php
+        while (the_flexible_field("elastic_sections")):
+            get_template_part('template-flexible/' . get_row_layout());
+        endwhile;
+        ?>
+        <div>
+            <h2 class="fw-semibold">
+                Tagi
+            </h2>
+            <div class="d-flex flex-row gap-3 py-2">
+                <?php
+                $tags = get_the_terms(get_the_ID(), 'post_tag');
+                foreach ($tags as $tag) {
+                    ?>
+                    <a class="tag-cloud-link" href="<?php echo get_tag_link($tag->term_id); ?>">
+                        <?= $tag->name ?>
+                    </a>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
     </div>
 </section>
-<?php
-while (the_flexible_field("elastic_sections")):
-    get_template_part('template-flexible/' . get_row_layout());
-endwhile;
-?>
-
 
 <?php
-
-
 get_footer();
 ?>
