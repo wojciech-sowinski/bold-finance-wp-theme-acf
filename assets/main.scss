@@ -253,7 +253,7 @@ h1,
 .h1 {
 	font-size: 32px !important;
 
-	
+
 
 }
 
@@ -279,7 +279,7 @@ a {
 
 p {
 	line-height: 2em;
-	margin:0 0;
+	margin: 0 0;
 }
 
 .note {
@@ -290,16 +290,19 @@ p {
 	}
 }
 
-.post-content{
+.post-content {
 	max-width: 900px;
-	>*{
-		padding-top:20px;
+
+	>* {
+		padding-top: 20px;
 	}
-	ul{
+
+	ul {
 		padding-left: 20px;
 	}
-	&:last-child{
-		padding-bottom:20px;
+
+	&:last-child {
+		padding-bottom: 20px;
 	}
 }
 
@@ -359,6 +362,7 @@ header .nav-link {}
 .splide {
 	.slide-title {
 		font-size: 48px !important;
+
 		@media (max-width: breakpoint-max(sm)) {
 			font-size: 32px !important;
 		}
@@ -366,6 +370,7 @@ header .nav-link {}
 
 	.slide-content {
 		font-size: 32px !important;
+
 		@media (max-width: breakpoint-max(sm)) {
 			font-size: 24px !important;
 		}
@@ -667,8 +672,6 @@ nav#header {
 }
 
 
-
-
 //acordion
 
 .accordion-button:focus {
@@ -691,4 +694,83 @@ nav#header {
 	}
 
 
+}
+
+
+#creditValueRange {}
+
+#creditValue {}
+
+#consent {
+	width: 24px;
+}
+
+.price-select {
+	p {
+		display: flex;
+		flex-wrap: 1;
+
+		#creditValueRange {
+			flex-shrink: 1;
+			flex-grow: 1;
+		}
+
+		#creditValue {
+			flex-shrink: 1;
+			margin-left: 0;
+		}
+	}
+}
+
+.credit-form {
+	#mail_sended_info {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: rgba(255, 255, 255, 0.85);
+		font-weight: bold;
+		text-align: center;
+
+		.send-icon {
+			color: #00FF85;
+			padding: 30px;
+
+			i {
+				font-size: 84px;
+			}
+		}
+	}
+
+	.wpcf7 form.sent .wpcf7-response-output {
+		display: none !important;
+	}
+}
+
+
+
+.small-logo {
+	height: 40px;
+	width: auto;
+}
+
+ul {
+
+	list-style: none;
+	padding: 0;
+
+	li::before {
+		content: "\2022";
+		/* Kod unicode dla kropki */
+		color: red;
+		/* Ustawienie koloru kropki */
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em;
+	}
 }
