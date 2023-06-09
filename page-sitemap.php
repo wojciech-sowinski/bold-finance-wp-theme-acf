@@ -4,7 +4,6 @@
  * Description: Page template SiteMap.
  *
  */
-
 get_header();
 ?>
 <section class="container pt-2 pb-2 ">
@@ -20,7 +19,7 @@ get_header();
         </div>
     </div>
 </section>
-<section class="sitemap-page-pages">
+<section class="sitemap-page-pages py-5">
     <div class="container">
         <div class="row">
             <h2>
@@ -28,7 +27,7 @@ get_header();
             </h2>
         </div>
         <div class="row">
-            <ul class="d-flex gap-2 flex-wrap p-4">
+            <ul class="d-flex gap-2 flex-wrap p-4 primary-styled">
                 <?php
                 $pages = get_pages();
                 foreach ($pages as $page) {
@@ -51,20 +50,18 @@ get_header();
             'public' => true,
             '_builtin' => false
         );
-
         $postTypes = get_post_types($args);
 
         foreach ($postTypes as $postType) {
             $postFullName = get_post_type_object($postType)->labels->singular_name;
             $postType = get_post_type_object($postType);
             $postTypeName = $postType->name;
-
             ?>
             <div class="row">
                 <h2>
                     <?= $postFullName; ?>
                 </h2>
-                <ul class="d-flex gap-2 flex-wrap  p-4">
+                <ul class="d-flex gap-2 flex-wrap p-4 primary-styled">
                     <?php
                     $posts = get_posts(
                         array(
@@ -74,7 +71,7 @@ get_header();
                     foreach ($posts as $post) {
                         ?>
                         <li class="m-2 col-12 col-md-4">
-                            <?= $post->post_name; ?>
+                            <?= $post->post_title; ?>
                         </li>
                         <?php
                     }
@@ -86,7 +83,27 @@ get_header();
         ?>
     </div>
 </section>
-
+<section class="container py-4 tags_cloud_section">
+    <div class="row py-2">
+     
+        <h2 class="fw-bold">
+          Tagi
+        </h2>
+      
+    </div>
+    <div class="row d-flex flex-row gap-3 px-2 py-2">
+      <?php
+      $args = array(
+        'format' => 'array',
+        'order' => 'asc',
+      );
+      $tags = wp_tag_cloud($args);
+      foreach ($tags as $tag) {
+        echo $tag;
+      }
+      //       ?>
+    </div>
+  </section>
 
 <?php
 get_footer();

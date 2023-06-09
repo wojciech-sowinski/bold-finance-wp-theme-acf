@@ -106,7 +106,6 @@ if (get_row_layout() == 'targets_items_block'): ?>
         const partnerCarousel = new Splide(splideId, {
             type: 'loop',
             drag: 'free',
-            focus: 'center',
             perPage: 4,
             gap: 20,
             pagination: false,

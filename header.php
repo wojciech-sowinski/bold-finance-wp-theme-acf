@@ -22,6 +22,8 @@ $search_enabled = get_theme_mod('search_enabled', '1'); // Get custom meta-value
 	</a>
 
 	<div id="wrapper">
+
+	<?php if ( get_field( 'hide_footer_header' ) == 0 ){?>
 		<header>
 			<div class="container-flexi header-info-bar">
 				<div class="container py-2">
@@ -151,6 +153,11 @@ $search_enabled = get_theme_mod('search_enabled', '1'); // Get custom meta-value
 				</div><!-- /.container -->
 			</nav><!-- /#header -->
 		</header>
+
+		<?php 
+		}
+		
+		?>
 
 
 		<main id="main" class="container-fluid m-0 p-0" <?php if (isset($navbar_position) && 'fixed_top' === $navbar_position): echo ' style="padding-top: 100px;"'; elseif (isset($navbar_position) && 'fixed_bottom' === $navbar_position):

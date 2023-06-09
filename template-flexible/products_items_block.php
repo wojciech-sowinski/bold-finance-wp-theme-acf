@@ -90,8 +90,8 @@ if (get_row_layout() == 'products_items_block'): ?>
         const partnerCarousel = new Splide(splideId, {
             type: 'loop',
             drag: 'free',
-            focus: 'center',
             perPage: 4,
+            padding:20,
             gap: 20,
             pagination: false,
             arrows: false,

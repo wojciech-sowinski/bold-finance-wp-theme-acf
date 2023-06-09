@@ -44,7 +44,6 @@
             const partnerCarousel = new Splide('.partners-carousel .splide', {
                 type: 'loop',
                 drag: 'free',
-                focus: 'center',
                 perPage: 4,
                 pagination: false,
                 arrows: false,

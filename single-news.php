@@ -45,8 +45,28 @@ get_header();
     </div>
 </section>
 
-<section class="py-4">
-    <div class="container post-content" id="more">
+<section class="py-4 px-3">
+    <?php
+    $previous_page = wp_get_referer() ?  wp_get_referer() :  get_site_url();
+    ?>
+    <div class="container post-content position-relative" id="more">
+        <aside class="context-nav gap-2">
+            <a href="<?= $previous_page ?>">
+                <div class="p-2 rounded-1 context-icon d-flex justify-content-center align-items-center">
+                    <i class="icon-left-arrow"></i>
+                </div>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">
+                <div class="p-2 rounded-1 context-icon  d-flex justify-content-center align-items-center">
+                    <i class="icon-facebook"></i>
+                </div>
+            </a>
+            <a href="mailto:?subject=Zapraszam do odwiedzenia strony&body=Zapraszam do odwiedzenia tej strony: <?php echo esc_url(home_url('/')); ?>">
+                <div class="p-2 rounded-1 context-icon  d-flex justify-content-center align-items-center">
+                    <i class="icon-mail"></i>
+                </div>
+            </a>
+        </aside>
         <?php
         the_content();
         ?>

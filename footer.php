@@ -1,4 +1,7 @@
 </main><!-- /#main -->
+<?php
+
+if ( get_field( 'hide_footer_header' ) == 0 ){?>
 <footer id="footer">
 	<div class="container pt-5 pb-4">
 		<div class="row d-flex justify-content-between">
@@ -7,7 +10,7 @@
 				<div class="mb-2">
 					<?php if ($footer_logo_column_1): ?>
 						<a href="<?php get_site_url() ?>">
-							<img class="img-fluid pb-3" src="<?php echo esc_url($footer_logo_column_1['url']); ?>"
+							<img class="img-fluid pb-3" style="max-width: 200px" src="<?php echo esc_url($footer_logo_column_1['url']); ?>"
 								alt="<?php echo esc_attr($footer_logo_column_1['alt']); ?>"
 								title="<?php echo esc_attr($footer_logo_column_1['alt']); ?>" />
 						</a>
@@ -21,11 +24,7 @@
 								href="<?php the_sub_field('footer_link_url_column_1'); ?>"><?php the_sub_field('footer_link_text_column_1'); ?></a>
 						</div>
 					<?php endwhile; ?>
-
 				<?php endif; ?>
-
-
-
 			</div>
 			<div class="col-12 col-md-6 col-lg-2 pt-3 pt-md-0">
 				<div class="mb-2">
@@ -156,6 +155,9 @@
 
 
 </footer><!-- /#footer -->
+<?php
+}
+?>
 </div><!-- /#wrapper -->
 <?php
 wp_footer();

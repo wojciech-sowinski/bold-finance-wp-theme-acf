@@ -584,6 +584,8 @@ function generate_theme_option_css()
 
 	$shadowCheck = get_theme_mod('shadow_check');
 	$shadowHoverCheck = get_theme_mod('shadow_hover_check');
+	$griadentTop = get_theme_mod('griadient_top_color');
+	$griadentBottom = get_theme_mod('griadient_bottom_color');
 
 	?>
 		<style>
@@ -594,6 +596,8 @@ function generate_theme_option_css()
   --bf_primary_hover: <?php echo $primary_hover ?> !important;
   --bf_black: <?php echo $black ?> !important;
   --bf_white: <?php echo $white ?> !important;
+  --bf_gradient_top:<?php echo $griadentTop ?> !important;
+  --bf_gradient_bottom:<?php echo $griadentBottom ?> !important;
 }
 
 .border-primary{
@@ -1020,13 +1024,10 @@ function idTag($id = null) {
 
 function read_time_counter() {
     $content = get_the_content();
-    $content = strip_tags($content); // Usuń znaczniki HTML
-
-    $read_speed = 100; // words/minute
-    $word_count = str_word_count($content); // Oblicz liczbę słów w treści
-
-    $read_time = ceil($word_count / $read_speed); // Oblicz czas czytania w minutach
-
+    $content = strip_tags($content); 
+    $read_speed = 100; 
+    $word_count = str_word_count($content); 
+    $read_time = ceil($word_count / $read_speed); 
     return $read_time;
 }
 
