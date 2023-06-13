@@ -29,7 +29,7 @@
             </div>
             <div
                 class="col-12 col-lg-6 bg-primary text-light d-flex flex-column justify-content-center p-1 p-md-5 align-items-start">
-                <div class="col-12 py-3 px-2 px-md-5">
+                <div class="col-12 py-4 px-3 px-md-5">
                     <h2 class="py-2 text-center text-lg-start ">
                         <?php the_sub_field('title'); ?>
                     </h2>

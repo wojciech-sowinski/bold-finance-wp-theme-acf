@@ -148,6 +148,25 @@ function boldfinance_customize($wp_customize)
 			)
 		)
 	);
+	$wp_customize->add_setting(
+		'primary_btn_color',
+		array(
+			'default' => '#7000FF',
+			'transport' => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_btn_color',
+			array(
+				'label' => __('primary_btn_color', 'boldfinance'),
+				'section' => 'color_palette_section',
+				'settings' => 'primary_btn_color',
+			)
+		)
+	);
 
 	$wp_customize->add_setting(
 		'primary_hover',

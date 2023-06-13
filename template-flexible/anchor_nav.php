@@ -8,10 +8,10 @@
  */
 ?>
 <?php if (get_row_layout() == 'anchor_nav'): ?>
-    <section class="pt-4 anchor_nav">
+    <section class="pt-4 anchor_nav bg-white">
         <div class="container">
             <div class="row">
-                <ul class="nav nav-tabs d-flex justify-content-center  mt-3 mb-5" id="nav-tabs-dot" role="tablist">
+                <ul class="nav nav-tabs d-flex justify-content-center mt-3 mb-3" id="nav-tabs-dot" role="tablist">
                     <?php if (have_rows('anchor_nav_link')): ?>
                         <?php while (have_rows('anchor_nav_link')):
                             the_row(); ?>
