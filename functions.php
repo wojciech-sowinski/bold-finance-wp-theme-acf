@@ -577,6 +577,7 @@ function generate_theme_option_css()
 {
 
 	$primary = get_theme_mod('primary');
+	$primary_btn = get_theme_mod('primary_btn_color');
 	$secondary = get_theme_mod('secondary');
 	$primary_hover = get_theme_mod('primary_hover');
 	$black = get_theme_mod('black');
@@ -592,6 +593,7 @@ function generate_theme_option_css()
 
 :root {
   --bf_primary: <?php echo $primary ?> !important;
+  --bf_primary_button: <?php echo $primary_btn ?> !important;
   --bf_secondary: <?php echo $secondary ?> !important;
   --bf_primary_hover: <?php echo $primary_hover ?> !important;
   --bf_black: <?php echo $black ?> !important;
@@ -677,7 +679,7 @@ input[type=range]:focus {
   outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  background: #e4e4e4;
+  background: var(--bf_secondary);
   border: 0;
   width: auto;
   height: 4px;
@@ -687,17 +689,17 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -8px;
   width: 20px;
   height: 20px;
-  background: #7000ff;
+  background: var(--bf_primary);
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 20px;
   cursor: pointer;
   -webkit-appearance: none;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #e4e4e4;
+  background: var(--bf_secondary);
 }
 input[type=range]::-moz-range-track {
-  background: #e4e4e4;
+  background: var(--bf_primary);
   border: 0;
   width: auto;
   height: 4px;
@@ -721,27 +723,27 @@ input[type=range]::-ms-track {
   cursor: pointer;
 }
 input[type=range]::-ms-fill-lower {
-  background: #e4e4e4;
+  background: var(--bf_secondary);
   border: 0;
 }
 input[type=range]::-ms-fill-upper {
-  background: #e4e4e4;
+  background: var(--bf_secondary);
   border: 0;
 }
 input[type=range]::-ms-thumb {
   width: 20px;
   height: 20px;
-  background: #7000ff;
+  background: var(--bf_primary);
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 20px;
   cursor: pointer;
   margin-top: 0px;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #e4e4e4;
+  background: var(--bf_secondary);
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #e4e4e4;
+  background: var(--bf_secondary);
 }
 @supports (-ms-ime-align:auto) {
   input[type=range] {
@@ -809,7 +811,7 @@ input[type=range]:focus::-ms-fill-upper {
 			
 			.btn-primary {
 				color: <?php echo $white ?> !important;
-				background-color: <?php echo $primary ?> !important;
+				background-color: <?php echo $primary_btn ?> !important;
 			}
 			
 			.btn-primary:hover {
