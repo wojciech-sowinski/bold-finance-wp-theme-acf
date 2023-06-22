@@ -28,13 +28,13 @@
                         <?php endif; ?>
                     </div>
                     <div>
-                        <h1 class="py-2 text-center text-lg-start ">
+                        <h1 class="py-3 text-center text-lg-start ">
                             <?php the_sub_field('page_header_title'); ?>
                         </h1>
-                        <p class="py-2 px-3 text-lg-start ">
+                        <p class="py-3 px-3 text-center text-lg-start ">
                             <?php the_sub_field('page_header_text'); ?>
                         </p>
-                        <div class="py-2 d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center  gap-5">
+                        <div class="py-3 d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center  gap-5">
                             <?php if (have_rows('page_header_btn')): ?>
                                 <?php while (have_rows('page_header_btn')):
                                     the_row(); ?>

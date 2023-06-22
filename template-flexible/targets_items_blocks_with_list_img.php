@@ -34,7 +34,7 @@
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </ul>
-                        <div class="py-3">
+                        <div class="py-3  d-flex justify-content-center justify-content-lg-start">
                             <a title="check offer" class="btn btn-primary btn-sm" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             <?php wp_reset_postdata(); ?>
                         </div>

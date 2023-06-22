@@ -58,7 +58,7 @@
                                         <?php endwhile; ?>
                                     </ul>
                                 <?php endif; ?>
-                                <div class="py-3">
+                                <div class="py-3 d-flex justify-content-center justify-content-lg-start">
                                     <a class="btn btn-primary btn-sm" title="Read more" href="<?php the_permalink(); ?>">Sprawdź</a>
                                 </div>
                             </div>
