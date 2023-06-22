@@ -50,7 +50,25 @@
                           <?php endif; ?>
                         </span>
                         <span class="d-block fw-semibold">
-                          <?php the_sub_field('adress_blocks_block_adress_text'); ?>
+                          <?php
+                          if (get_sub_field('adress_blocks_block_adress_line_link_type') == 0) {
+                            echo the_sub_field('adress_blocks_block_adress_text');
+                          } elseif (get_sub_field('adress_blocks_block_adress_line_link_type') == 1) {
+                            ?>
+                            <a class="text-dark" alt="<?= the_sub_field('adress_blocks_block_adress_text'); ?>" title="<?= the_sub_field('adress_blocks_block_adress_text'); ?>" href="tel:<?= the_sub_field('adress_blocks_block_adress_text'); ?>">
+                              <?= the_sub_field('adress_blocks_block_adress_text'); ?>
+                            </a>
+                            <?php
+                          } elseif (get_sub_field('adress_blocks_block_adress_line_link_type') == 2) {
+                            ?>
+                            <a class="text-dark" alt="<?= the_sub_field('adress_blocks_block_adress_text'); ?>" title="<?= the_sub_field('adress_blocks_block_adress_text'); ?>" href="mailto:<?= the_sub_field('adress_blocks_block_adress_text'); ?>">
+                              <?= the_sub_field('adress_blocks_block_adress_text'); ?>
+                            </a>
+                            <?php
+                          }
+                          ?>
+                          <a href="">
+                          </a>
                         </span>
                       </div>
                     <?php endwhile; ?>

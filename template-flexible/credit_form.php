@@ -62,20 +62,25 @@
           echo 'col-lg-9';
         }
         ?> p-1 px-md-4  rounded-2 position-relative">
-        <?php 
-        
-        $formId = 700;
-        
-        ?>
-          <?= do_shortcode('[contact-form-7 id="'.$formId.'" title="credit-form"]') ?>
+          <?php
+
+          $formId = 700;
+
+          ?>
+          <div class="p-3 <?php if (!get_sub_field('credit_form_hide_column')) {
+          echo 'border-4 border-start border-primary shadow';
+        }
+        ?>">
+            <?= do_shortcode('[contact-form-7 id="' . $formId . '" title="credit-form"]') ?>
+          </div>
           <div id="mail_sended_info" class="d-none p-3">
             <div class="send-icon">
               <i class="icon-checked"></i>
             </div>
             <p>
-              <span>Dziękujemy za wypełnienie formularza.</span>
-              <span>Postaramy się jak najszybciej z Państwem skontaktować.</span>
-            </p>
+              <span><?= __('Dziękujemy za wypełnienie formularza.','boldfinance') ?></span>
+              <span><?= __('Postaramy się jak najszybciej z Państwem skontaktować.','boldfinance') ?></span>
+              </p>
           </div>
         </div>
       </div>
@@ -107,8 +112,8 @@ if ($posts) {
 <script>
   var formRange = document.querySelector('.form-range');
   formRange.max = <?= get_sub_field('credit_form_max_credit_value'); ?>;
-  formRange.step = 10;
-  
+  formRange.step = <?= get_sub_field('credit_form_step'); ?>;
+
   var formId = <?= $formId ?>
 
   var privacyLink = document.querySelector('.privacy-link');
@@ -153,6 +158,3 @@ if ($posts) {
   }, false);
 
 </script>
-
-
-

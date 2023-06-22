@@ -59,10 +59,10 @@
                             <?php the_sub_field('image_text_header'); ?>
                         </span>
                     </div>
-                    <h2 class="py-2 text-center text-lg-start ">
+                    <h2 class="py-2 px-3 text-center text-lg-start ">
                         <?php the_sub_field('image_text_title'); ?>
                     </h2>
-                    <p class="py-2 text-center text-lg-start ">
+                    <p class="py-2 px-3 text-lg-start ">
                         <?php the_sub_field('image_text_text'); ?>
                     </p>
                     <div class="py-2 d-flex justify-content-center justify-content-lg-start">

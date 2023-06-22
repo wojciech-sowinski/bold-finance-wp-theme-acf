@@ -108,6 +108,7 @@ if (get_row_layout() == 'targets_items_block'): ?>
             drag: 'free',
             perPage: 4,
             gap: 20,
+            snap:true,
             pagination: false,
             arrows: false,
             breakpoints: {

@@ -71,6 +71,7 @@
         const partnerCarousel = new Splide('.news-blocks .splide', {
             type: 'loop',
             drag: 'free',
+            snap:true,
             perPage: 4,
             gap: 20,
             pagination: false,

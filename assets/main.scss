@@ -210,6 +210,7 @@ $link-decoration: none;
  */
 
 body {
+	overflow-x: hidden;
 	&.page-template-page-full {
 		#main {
 			max-width: 100%;
@@ -274,7 +275,7 @@ p,
 span,
 button,
 a {
-	font-size: 16px !important;
+	font-size: 16px;
 }
 
 p {
@@ -284,8 +285,9 @@ p {
 
 .note {
 	font-size: 12px !important;
-
+	
 	p {
+		line-height: 17px;
 		font-size: 12px !important;
 	}
 }
@@ -713,8 +715,6 @@ nav#header {
 	#sidebar {
 		margin-top: 60px;
 	}
-
-
 }
 
 
@@ -723,7 +723,30 @@ nav#header {
 #creditValue {}
 
 #consent {
-	width: 24px;
+	margin-top: 2px;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+}
+
+.consent-container {
+	color:#939393;
+	.wpcf7-list-item{
+		margin:0;
+	}
+	label{
+		display:flex;
+		align-items: flex-start;
+	}
+	span{
+		font-size: 13px;
+		line-height: 17px;
+	}
+	a{
+		font-size: 13px;
+		color:#939393;
+		text-decoration: underline;
+	}
 }
 
 .price-select {
@@ -881,7 +904,7 @@ ul.primary-styled {
 	.newsletter-form {
 		a {
 			color: #fff;
-			text-decoration: none;
+			text-decoration: underline;
 		}
 
 		.newsletter-form-inputs {
@@ -935,3 +958,14 @@ ul.primary-styled {
     z-index: 10;
 }
 
+.wpcf7-acceptance{
+	span{
+		line-height: 17px;
+		font-size: 12px;
+	}
+	a{
+		text-decoration: underline;
+		line-height: 17px;
+		font-size: 12px;
+	}
+}

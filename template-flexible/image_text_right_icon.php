@@ -33,7 +33,7 @@
                     <h2 class="py-2 text-center text-lg-start ">
                         <?php the_sub_field('title'); ?>
                     </h2>
-                    <p class="py-2 text-center text-lg-start ">
+                    <p class="py-2 px-3 text-lg-start ">
                         <?php the_sub_field('text_1'); ?>
                     </p>
                     <div class="d-flex py-3 gap-5 justify-content-center justify-content-lg-start">

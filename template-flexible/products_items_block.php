@@ -91,6 +91,7 @@ if (get_row_layout() == 'products_items_block'): ?>
             type: 'loop',
             drag: 'free',
             perPage: 4,
+            snap:true,
             padding:20,
             gap: 20,
             pagination: false,

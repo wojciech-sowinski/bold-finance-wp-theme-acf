@@ -31,7 +31,7 @@
                         <h1 class="py-2 text-center text-lg-start ">
                             <?php the_sub_field('page_header_title'); ?>
                         </h1>
-                        <p class="py-2 text-center text-lg-start ">
+                        <p class="py-2 px-3 text-lg-start ">
                             <?php the_sub_field('page_header_text'); ?>
                         </p>
                         <div class="py-2 d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center  gap-5">
@@ -50,7 +50,7 @@
                                     <?php endif; ?>
                                 <?php endwhile; ?>
                             <?php endif; ?>
-                            <?php if (have_rows('page_header_additional_link')): ?>
+                            <?php if (have_rows('page_header_additional_link') && !empty(the_sub_field('page_header_additional_link_text'))) : ?>
                                 <?php while (have_rows('page_header_additional_link')):
                                     the_row(); ?>
                                     <?php $page_header_additional_link_url = get_sub_field('page_header_additional_link_url'); ?>
